@@ -2,34 +2,48 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatable" content="IE-edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Unit Conversion</title>
-
+    <title>Unit Converter</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
     <div class="container">
-        <h1 id="heading">unit convert</h1>
-        <div id="content">
-
-            <div class="content1">
-                <label for="">feet</label><br>
-                <input type="Number" value="1" id="feet" class="content2">
+        <h1>Unit Converter</h1>
+        
+        <div class="converter-container">
+            <div class="unit-selector">
+                <select id="category" class="dropdown">
+                    <option value="length">Length</option>
+                    <option value="weight">Weight</option>
+                    <option value="temperature">Temperature</option>
+                    <option value="area">Area</option>
+                    <option value="volume">Volume</option>
+                    <option value="time">Time</option>
+                </select>
             </div>
 
-            <div class="content1">
-            <h1>=</h1>
-            </div>
+            <div class="conversion-section">
+                <div class="input-group">
+                    <input type="number" id="fromValue" placeholder="Enter value">
+                    <select id="fromUnit" class="dropdown"></select>
+                </div>
 
-            <div class="content1">
-                <label for="">inches</label><br>
-                <input type="Number" value="12" id="inch" class="content2">
+                <div class="equals-sign">
+                    <div class="equals-line"></div>
+                    <div class="equals-line"></div>
+                </div>
+
+                <div class="input-group">
+                    <input type="number" id="toValue" readonly>
+                    <select id="toUnit" class="dropdown"></select>
+                </div>
             </div>
         </div>
+
+        <div class="info-section">
+            <p id="formula"></p>
+        </div>
     </div>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
-
